@@ -10,6 +10,8 @@ payload = {
 }
 
 r = requests.get(f"https://api.telegram.org/bot{TOKEN}/setWebhook", params=payload)
+r = requests.get(f"https://api.telegram.org/bot{TOKEN}/GetWebhookInfo", params=payload)
 
 
-print(r.status_code)
+
+print(r.json())

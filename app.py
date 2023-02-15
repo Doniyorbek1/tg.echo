@@ -13,7 +13,7 @@ app = Flask(__name__)
 def hello():
     data = request.get_json(force = True)
     
-    update:Update = Update(data, bot)
+    update:Update = Update.de_json(data, bot)
     
     #update 
     chat_id = update.message.chat_id
