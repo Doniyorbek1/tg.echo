@@ -4,7 +4,7 @@ import os
 
 TOKEN = os.environ["TOKEN"]
 
-bot = Bot()
+bot = Bot(TOKEN)
 
 app = Flask(__name__)
 
