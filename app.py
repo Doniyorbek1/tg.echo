@@ -1,7 +1,6 @@
 from flask import Flask, request
 from telegram import Bot, Update
 import os
-import requests
 
 TOKEN = os.environ["TOKEN"]
 
