@@ -19,7 +19,8 @@ def hello():
     chat_id = update.message.chat_id
     text = update.message.text
     
-    bot.send_message(chat_id, text)
+    if text != None:
+        bot.send_message(chat_id, text)
     
     return 'ok'
 
