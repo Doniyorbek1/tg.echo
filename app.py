@@ -27,6 +27,8 @@ def hello():
         #update 
         dispacher.add_handler(CommandHandler('start', callback=start))
         dispacher.add_handler(MessageHandler(Filters.text, echo))
+        
+        dispacher.process_update(update)
         return 'ok'
 
 
