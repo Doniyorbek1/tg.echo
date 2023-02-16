@@ -11,17 +11,21 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=["POST"])
 def hello():
-    data = request.get_json(force = True)
+    if request.method == 'GET':
+        return 'hi from Python2022I'
     
-    update:Update = Update.de_json(data, bot)
+    elif request.method == "POST":
+        data = request.get_json(force = True)
     
-    #update 
-    chat_id = update.message.chat_id
-    text = update.message.text
+        update:Update = Update.de_json(data, bot)
     
-    if text != None:
-        bot.send_message(chat_id, text)
+        #update 
+        chat_id = update.message.chat_id
+        text = update.message.text
     
-    return 'ok'
+        if text != None:
+            bot.send_message(chat_id, text)
+    
+            return 'ok'
 
 
