@@ -25,7 +25,7 @@ def hello():
     
         if text != None:
             bot.send_message(chat_id, text)
-    
-            return 'ok'
+        print(chat_id)
+        return 'ok'
 
 
