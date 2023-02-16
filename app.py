@@ -9,7 +9,7 @@ bot = Bot(TOKEN)
 app = Flask(__name__)
 
 
-@app.route('/webhook', methods=["POST"])
+@app.route('/webhook', methods=["POST", "GET"])
 def hello():
     if request.method == 'GET':
         return 'hi from Python2022I'
